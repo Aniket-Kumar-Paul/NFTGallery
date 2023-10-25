@@ -49,6 +49,8 @@ contract nftsIPFS {
         nft.description = _description;
         nft.email = _email;
         nft.category = _category;
+        nft.timestamp = block.timestamp;
+        nft.id = nftCount;
 
         return (_title, _description, _category, _creator, _image);
     }
