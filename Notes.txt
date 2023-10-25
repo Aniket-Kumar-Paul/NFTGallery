@@ -1,2 +1,4 @@
 # To start api 
     > npm run start
+# Deploy smart contract
+    > npm run deploy (inside web3 directory)

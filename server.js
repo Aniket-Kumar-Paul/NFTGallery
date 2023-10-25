@@ -29,7 +29,7 @@ const port = process.env.PORT || 3000;
 let server;
 nextServer.prepare().then(() => {
   // waits for the next.js server to prepare itself
-  // ssets up express route that catches all requests and passes them to the next.js request handler
+  // sets up express route that catches all requests and passes them to the next.js request handler
   app.get("*", (req, res) => {
     return handle(req, res);
   });
