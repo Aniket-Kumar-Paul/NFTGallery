@@ -1,4 +1,6 @@
-# To start api 
+# To start api/backend 
     > npm run start
+# To start frontend
+    > npm run dev
 # Deploy smart contract
     > npm run deploy (inside web3 directory)
