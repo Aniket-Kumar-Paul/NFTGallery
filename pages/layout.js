@@ -1,8 +1,13 @@
 import React from 'react'
 
+// INTERNAL IMPORTS
+import { Logo } from '../Components'
+
 const layout = () => {
   return (
-    <div className='home'>layout</div>
+    <div className='home'>
+      <Logo />
+    </div>
   )
 }
 
