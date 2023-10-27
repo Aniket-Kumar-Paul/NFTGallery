@@ -11,6 +11,7 @@ import {
   Form,
   Logo,
   Notification,
+  Profile,
 } from "../Components";
 
 const layout = () => {
@@ -35,6 +36,9 @@ const layout = () => {
 
       <p>FORM</p>
       <Form />
+
+      <p>Profile</p>
+      <Profile />
 
       <p>CHECKBOX</p>
       <CheckBox />
