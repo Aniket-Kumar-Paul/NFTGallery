@@ -9,6 +9,7 @@ import {
   Filter,
   Footer,
   Form,
+  Header,
   Login,
   Logo,
   Notification,
@@ -18,6 +19,10 @@ import {
 const layout = () => {
   return (
     <div className="home">
+      <p>HEADER</p>
+      <Header />
+
+      <p>LOGO</p>
       <Logo />
 
       <p>BUTTON</p>
