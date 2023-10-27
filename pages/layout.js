@@ -10,6 +10,7 @@ import {
   Footer,
   Form,
   Logo,
+  Notification,
 } from "../Components";
 
 const layout = () => {
@@ -19,6 +20,9 @@ const layout = () => {
 
       <p>BUTTON</p>
       <Button />
+
+      <p>Notification</p>
+      <Notification />
 
       <p>FILTER</p>
       <Filter />
