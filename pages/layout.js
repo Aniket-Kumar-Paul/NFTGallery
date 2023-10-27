@@ -1,7 +1,7 @@
 import React from "react";
 
 // INTERNAL IMPORTS
-import { Button, Card, CheckBox, Footer, Logo } from "../Components";
+import { Button, Card, CheckBox, Filter, Footer, Logo } from "../Components";
 
 const layout = () => {
   return (
@@ -10,6 +10,9 @@ const layout = () => {
 
       <p>BUTTON</p>
       <Button />
+
+      <p>FILTER</p>
+      <Filter />
 
       <p>CARD</p>
       <Card />
