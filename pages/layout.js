@@ -9,6 +9,7 @@ import {
   Filter,
   Footer,
   Form,
+  Login,
   Logo,
   Notification,
   Profile,
@@ -36,6 +37,9 @@ const layout = () => {
 
       <p>FORM</p>
       <Form />
+
+      <p>LOGIN</p>
+      <Login />
 
       <p>Profile</p>
       <Profile />
