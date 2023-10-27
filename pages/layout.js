@@ -8,6 +8,7 @@ import {
   Donate,
   Filter,
   Footer,
+  Form,
   Logo,
 } from "../Components";
 
@@ -27,6 +28,9 @@ const layout = () => {
 
       <p>DONATE</p>
       <Donate />
+
+      <p>FORM</p>
+      <Form />
 
       <p>CHECKBOX</p>
       <CheckBox />
