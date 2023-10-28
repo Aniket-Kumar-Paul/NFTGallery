@@ -13,7 +13,7 @@ const Product = ({
   setNotification,
   setSupport,
   donateAmount,
-  setloading,
+  setLoading,
   image
 }) => {
   const handleClick = () => { // download
@@ -116,7 +116,7 @@ const Product = ({
         <div className="form">
           <div className="form_inner">
             <Donate
-              setloading={setloading}
+              setLoading={setLoading}
               donateAmount={donateAmount}
               setDonate={setDonate}
               setSupport={setSupport}
