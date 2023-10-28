@@ -7,7 +7,7 @@ const File = () => {
       <g
         id="SVGRepo_tracerCarrier"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         <path d="M15.331 6H8.5v20h15V14.154h-8.169z"></path>

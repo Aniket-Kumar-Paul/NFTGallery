@@ -15,7 +15,7 @@ const Upload = () => {
           stroke="#000000"
           stroke-width="1.5"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         ></path>{" "}
       </g>
     </svg>
