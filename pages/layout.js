@@ -14,6 +14,7 @@ import {
   Logo,
   Notification,
   Profile,
+  SignUp,
 } from "../Components";
 
 const layout = () => {
@@ -45,6 +46,9 @@ const layout = () => {
 
       <p>LOGIN</p>
       <Login />
+
+      <p>SIGNUP</p>
+      <SignUp />
 
       <p>Profile</p>
       <Profile />

@@ -41,7 +41,7 @@ const Profile = ({ setOpenProfile, userBalance, address }) => {
           </a>
         </div>
 
-        <button className={() => setOpenProfile(false)}>Close</button>
+        <button onClick={() => setOpenProfile(false)}>Close</button>
       </div>
     </>
   );
