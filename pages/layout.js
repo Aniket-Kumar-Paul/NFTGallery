@@ -13,6 +13,7 @@ import {
   Login,
   Logo,
   Notification,
+  Product,
   Profile,
   SignUp,
   Upload,
@@ -23,6 +24,9 @@ const layout = () => {
     <div className="home">
       <p>HEADER</p>
       <Header />
+
+      <p>PRODUCT</p>
+      <Product />
 
       <p>UPLOAD</p>
       <Upload />
