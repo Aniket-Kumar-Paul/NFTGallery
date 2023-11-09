@@ -17,6 +17,7 @@ const Profile = ({ setOpenProfile, userBalance, address }) => {
             width={80}
             height={80}
             onClick={() => setOpenProfile(true)}
+            alt="avatar"
           />
         </div>
 

@@ -39,7 +39,7 @@ const SignUp = ({
       // API CALL
       const response = await axios({
         method: "POST",
-        url: `/api/v1/user/signup`,
+        url: "/api/v1/users/signup",
         withCredentials: true,
         data: {
           name: user.name,

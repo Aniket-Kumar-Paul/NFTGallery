@@ -83,7 +83,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-color: #1a1a1ad2;
+  background-color: #1a1a1ad2;
   z-index: 11111;
 }
 

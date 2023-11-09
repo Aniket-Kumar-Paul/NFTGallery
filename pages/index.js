@@ -26,8 +26,8 @@ const Home = () => {
     contract,
     connect,
     userBalance,
-    UploadImage,
-    getUploadedImages,
+    UploadNft,
+    getUploadedNfts,
     setLoading,
     loading,
 
@@ -47,7 +47,7 @@ const Home = () => {
   // GET DATA
   const oldImages = [];
   const fetchImages = async () => {
-    const images = await getUploadedImages();
+    const images = await getUploadedNfts();
     setAllImages(images);
 
     const apiImages = await getAllNftsAPI();
@@ -57,7 +57,7 @@ const Home = () => {
   }, [address, contract]);
 
   if (allImages.length == 0) {
-    console.log("Loading");
+    console.log("Loading all images...");
   } else {
     allImages.map((image) => {
       oldImages.push(image);
@@ -89,6 +89,7 @@ const Home = () => {
         const formData = new FormData();
         formData.append("file", file);
 
+        console.log("Uploading to PINATA IPFS...")
         const response = await axios({
           method: "post",
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
@@ -100,13 +101,17 @@ const Home = () => {
             "Content-Type": "multipart/form-data",
           },
         });
+        console.log(`Uploaded to PINATA IPFS! URL: https://gateway.pinata.cloud/ipfs/${response.data.IpfsHash}`)
+
 
         const image = `https://gateway.pinata.cloud/ipfs/${response.data.IpfsHash}`;
-        await UploadImage({
+        console.log("Uploading to Smart Contract & MongoDB...")
+        await UploadNft({
           ...imageInfo,
           image: image,
           category: category,
         });
+        console.log("Uploaded to Smart Contract & MongoDB!")
         setFile(null);
       } catch (err) {
         console.log(err);
@@ -172,6 +177,7 @@ const Home = () => {
                   width={40}
                   height={40}
                   onClick={() => setOpenProfile(true)}
+                  alt="avatar"
                 />
               </p>
             )}

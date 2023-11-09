@@ -65,6 +65,7 @@ const Product = ({
               src={client[`client${1}`]}
               width={40}
               height={40}
+              alt="avatar"
             />
 
             <small

@@ -13,7 +13,7 @@ const StateContext = createContext();
 
 export const StateContextProvider = ({ children }) => {
   const { contract } = useContract(
-    "0x35FEC4A12ce1c9B4E7DDc38B2242fB7168590DB1"
+    "0x84312E9065d91fdBDC35721568bB5D9011594A47"
   );
   const address = useAddress();
   const connect = useMetamask();
@@ -45,6 +45,7 @@ export const StateContextProvider = ({ children }) => {
   const UploadNft = async (imageInfo) => {
     const { title, description, email, category, image } = imageInfo;
     try {
+      console.log("Uploading to Smart Contract...")
       // Get Listing Price & Uploading to smart contract
       const listingPrice = await contract.call("listingPrice");
       const createNFTs = await contract.call(
@@ -52,7 +53,9 @@ export const StateContextProvider = ({ children }) => {
         [address, image, title, description, email, category],
         { value: listingPrice.toString() }
       );
+      console.log("Uploaded to Smart Contract!")
 
+      console.log("Uploading to MongoDB...")
       // Store the NFT details in database
       const response = await axios({
         method: "POST",
@@ -66,7 +69,8 @@ export const StateContextProvider = ({ children }) => {
           email: email,
         },
       });
-      console.log(response);
+      console.log("Uploaded to MongoDB!")
+      console.log(`Response: ${response}`);
       console.info("Contract call success", createNFTs);
 
       setLoading(false);

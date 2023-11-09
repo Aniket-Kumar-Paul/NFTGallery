@@ -12,14 +12,11 @@ const Card = ({ setNotification, image, index }) => {
   return (
     <div className={Style.card}>
       <div className={Style.content}>
-
-        {/* <a href={`/image/${image.imageID}`}> */}
-        <a href={`/image/1`}>
+        <a href={`/image/${image.imageID}`}>
           <p>
             <Image
               className={Style.image}
-              // src={image.image} 
-              src={imagesNFT.img1} 
+              src={image.image} 
               alt="image"
               width={250}
               height={200}
@@ -30,42 +27,36 @@ const Card = ({ setNotification, image, index }) => {
         <span className={Style.para}>
           <Image
             className="avatar_img"
-            // src={images[`client${index + 1}`]}
-            src={images[`client1`]}
+            src={images[`client${index + 1}`]}
             width={40}
             height={40}
+            alt="avatar"
           />
           <small
             className={Style.para_small}
             onClick={() => (
               setNotification("Successfully copied"),
-              // navigator.clipboard.writeText(image.owner) // Copy to clipboard
-              navigator.clipboard.writeText("x") // Copy to clipboard
+              navigator.clipboard.writeText(image.owner) // Copy to clipboard
             )}
           >
-            {/* {image.owner.slice(0, 25)}... */}
-            0xdisfjiosdfioh234fdi
+            {image.owner.slice(0, 25)}...
           </small>
         </span>
 
         <span>
-          {/* CreatedAt: {new Date(image.createdAt * 1000).toDateString()} */}
-          Oct 26 2023
-          {/* <small className={Style.number}>#{image.imageID}</small> */}
-          <small className={Style.number}>#1</small>
+          CreatedAt: {new Date(image.createdAt * 1000).toDateString()}
+          <small className={Style.number}>#{image.imageID}</small>
         </span>
 
         <small className={Style.para}>
-          {/* {image.description.slice(0, 80)}.. */}
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, placeat...
+          {image.description.slice(0, 80)}..
         </small>
 
         <button
           className={Style.btn}
           onClick={() => (
             setNotification("Image URL is successfully copied."),
-            // navigator.clipboard.writeText(image.image) // Copy to clipboard
-            navigator.clipboard.writeText("x") // Copy to clipboard
+            navigator.clipboard.writeText(image.image) // Copy to clipboard
           )}
         >
           Copy URL
