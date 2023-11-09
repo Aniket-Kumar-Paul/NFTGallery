@@ -38,21 +38,21 @@ const Filter = ({
     }
   }
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => setSearch(debouncedSearch), 1000)
+  useEffect(() => {
+    const timer = setTimeout(() => setSearch(debouncedSearch), 1000)
 
-  //   return () => clearTimeout(timer)
-  // }, [debouncedSearch])
+    return () => clearTimeout(timer)
+  }, [debouncedSearch])
 
-  // useEffect(() => {
-  //   setAllImages(oldImages);
-  //   setImagesCopy(oldImages);
-  //   if (search) {
-  //     onHandleSerch(search);
-  //   } else {
-  //     onClearSearch();
-  //   }
-  // }, [search])
+  useEffect(() => {
+    setAllImages(oldImages);
+    setImagesCopy(oldImages);
+    if (search) {
+      onHandleSerch(search);
+    } else {
+      onClearSearch();
+    }
+  }, [search])
 
   const filter = [
     {
@@ -63,13 +63,13 @@ const Filter = ({
     }
   ]
 
-  // useEffect(() => {
-  //   if (activeSelect === "Old Images") {
-  //     setAllImages(oldImages)
-  //   } else {
-  //     setAllImages(oldImages.reverse())
-  //   }
-  // }, [activeSelect])
+  useEffect(() => {
+    if (activeSelect === "Old Images") {
+      setAllImages(oldImages)
+    } else {
+      setAllImages(oldImages.reverse())
+    }
+  }, [activeSelect])
 
   return (
     <div className={Style.Filter}>
