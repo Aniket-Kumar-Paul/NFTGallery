@@ -21,8 +21,8 @@ const Profile = ({ setOpenProfile, userBalance, address }) => {
           />
         </div>
 
-        {/* <span>{address.slice(0, 25)}</span> */}
-        <span>0xsdfji34r434hihfd43fe..</span>
+        <span>{address.slice(0, 25)}..</span>
+        
         <p className={Style.info}>
           {userBalance} Welcome to NFT Gallery. Our products help you securely distribute any type of media at scale-freeing you from restrictive platforms, middlemen, and algorithms that limit your creative agency.
         </p>
