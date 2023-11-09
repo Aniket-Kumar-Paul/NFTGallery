@@ -17,6 +17,7 @@ const Product = ({
   image
 }) => {
   const handleClick = () => { // download
+    console.log("image:", image)
     let url = `${image?.imageURL}`
     saveAs(url, `${image?.title}`)
   };
@@ -26,14 +27,9 @@ const Product = ({
   return (
     <div className={Style.Product}>
       <div className={Style.image}>
-        {/* <Image
+        <img
           className={Style.image_img}
           src={image?.imageURL}
-          alt="image"
-        /> */}
-        <Image
-          className={Style.image_img}
-          src={images.img1}
           alt="image"
         />
       </div>
@@ -53,7 +49,7 @@ const Product = ({
 
           <p className={Style.info}>
             <span>
-              Donation:{""} {image?.fundRaised} MATIC
+              Donation:{""} {image?.fundraised} MATIC
             </span> {" "}
             {""}{" "}
           </p>
@@ -99,7 +95,7 @@ const Product = ({
           onClick={() => navigator.clipboard.writeText(setNotification("Thanks for downloading"))}
         >
           <span
-            onClick={BTNStyle.button}
+            onClick={handleClick}
             className={`${BTNStyle.button_content} ${Style.btn}`}
           >
             Download Image{" "}

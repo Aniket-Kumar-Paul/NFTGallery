@@ -119,7 +119,7 @@ export const StateContextProvider = ({ children }) => {
         imageId: data[8].toNumber(),
       };
 
-      return image;
+      return nft;
     } catch (error) {
       console.log(error);
     }
